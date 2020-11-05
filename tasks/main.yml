@@ -2832,7 +2832,7 @@
   - package_aide_installed
 
 - name: enable fips mode
-  command: fips-mode-setup --enable
+  command: /usr/bin/fips-mode-setup --enable
   when:
   - ansible_virtualization_role != "guest" or ansible_virtualization_type != "docker"
   - restrict_strategy | bool
